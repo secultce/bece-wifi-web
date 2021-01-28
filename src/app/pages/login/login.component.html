@@ -1,0 +1,114 @@
+<!-- <div
+   class="column1"
+   fxLayout="row"
+   fxFlex="50%"
+   fxFlex.gt-sm="25%"
+   fxFlex
+></div>
+<div
+   class="column2"
+   fxLayout="row"
+   fxFlex="50%"
+   fxFlex.gt-sm="50%"
+   fxLayoutAlign="center"
+   fxFlex
+>
+   <mat-card>
+      <form>
+         <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="exemplo@mail.com" />
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            <mat-hint>Hint</mat-hint>
+         </mat-form-field>
+         <mat-form-field appearance="outline">
+            <mat-label>Senha</mat-label>
+            <input matInput placeholder="123456@exemplo" />
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            <mat-hint>Hint</mat-hint>
+         </mat-form-field>
+      </form>
+   </mat-card>
+</div>
+<div class="column3" fxLayout="row" fxFlex="50%" fxFlex.gt-sm="25%" fxFlex>
+   <form>
+      <mat-form-field appearance="outline">
+         <mat-label>Email</mat-label>
+         <input matInput placeholder="exemplo@mail.com" />
+         <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+         <mat-hint>Hint</mat-hint>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+         <mat-label>Senha</mat-label>
+         <input matInput placeholder="123456@exemplo" />
+         <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+         <mat-hint>Hint</mat-hint>
+      </mat-form-field>
+   </form>
+</div> -->
+<div id="login" fxLayout.xs="column" fxLayoutAlign="center">
+   <div class="item item-1" fxFlex="30%" fxFlexOrder="1"></div>
+   <div class="item item-1" fxFlex="30%" fxFlexOrder="3"></div>
+   <div
+      class="flexLogin"
+      fxLayout="column"
+      fxFlexOrder="2"
+      fxLayoutAlign="center center"
+      fxFlex="50%"
+   >
+      <mat-card class="cardLogin">
+         <div fxLayoutAlign="center" class="logo">
+            <img id="imgLogo" src="../../../assets/beceLogo.jpeg" />
+         </div>
+         <div class="title" fxLayoutAlign="center">
+            Entre com sua conta de email
+         </div>
+         <br />
+         <form>
+            <div class="example-container">
+               <div fxLayoutAlign="center">
+                  <mat-form-field appearance="outline">
+                     <mat-label>E-mail</mat-label>
+                     <input matInput placeholder="" />
+                     <mat-icon matSuffix>email</mat-icon>
+                  </mat-form-field>
+               </div>
+
+               <div fxLayoutAlign="center">
+                  <mat-form-field appearance="outline">
+                     <mat-label>Senha</mat-label>
+                     <input matInput type="password" matInput placeholder="" />
+                     <mat-icon matSuffix>vpn_key</mat-icon>
+                     <mat-error> Password is required </mat-error>
+                  </mat-form-field>
+               </div>
+               <div>
+                  <mat-checkbox class="remember-me" aria-label="Remember Me">
+                     Remember Me
+                  </mat-checkbox>
+               </div>
+               <br />
+               <br />
+               <div fxLayoutAlign="center">
+                  <button class="submit-button" mat-button color="primary">
+                     Entrar
+                  </button>
+               </div>
+               <br />
+               <br />
+               <div fxLayoutAlign="center">
+                  <a
+                     mat-button
+                     class="forgot-password"
+                     routerLink="/forgot-password"
+                     href=""
+                  >
+                     Esqueceu a senha?
+                  </a>
+               </div>
+               <br />
+            </div>
+         </form>
+      </mat-card>
+   </div>
+</div>
