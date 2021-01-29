@@ -1,1 +1,24 @@
-<p>nav-bar-menu works!</p>
+<mat-toolbar color="primary">
+   <button type="button" (click)="drawer.toggle()" mat-icon-button class="example-icon"
+      aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+   </button>
+   <span>BECE PF SENSE</span>
+   <span class="example-spacer"></span>
+</mat-toolbar>
+<mat-drawer-container class="example-container" autosize>
+   <mat-drawer #drawer class="example-sidenav" mode="side">
+      <p>Auto-resizing sidenav</p>
+      <mat-sidenav #sidenav>
+         <mat-nav-list>
+
+            <a mat-list-item [routerLink]="'/visitors'">Visitantes</a>
+            <a mat-list-item [routerLink]="'/vouchers'"> Vouchers </a>
+            <a mat-list-item [routerLink]="'/users'"> Usuários </a>
+            <a mat-list-item [routerLink]="'/login'"> sair </a>
+
+         </mat-nav-list>
+      </mat-sidenav>
+   </mat-drawer>
+</mat-drawer-container>
+<router-outlet></router-outlet>

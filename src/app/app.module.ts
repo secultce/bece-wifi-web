@@ -14,6 +14,7 @@ import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from 'src/angular-material.module';
+import { MatSidenavModule } from '@angular/material/sidenav';
 @NgModule({
    declarations: [
       AppComponent,
@@ -33,6 +34,7 @@ import { MaterialModule } from 'src/angular-material.module';
       FormsModule,
       ReactiveFormsModule,
       MaterialModule,
+      MatSidenavModule,
    ],
    providers: [],
    bootstrap: [AppComponent],
