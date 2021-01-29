@@ -8,18 +8,17 @@ import { VisitorComponent } from './pages/visitor/visitor.component';
 import { VoucherComponent } from './pages/voucher/voucher.component';
 
 const routes: Routes = [
-  { path: "",   redirectTo: '/login', pathMatch: 'full'},
-  {path:"login", component: LoginComponent},
-  {path:"forgot-password", component: ForgotPasswordComponent},
-  {path:"users", component: UserComponent},
-  {path:"visitors", component: VisitorComponent},
-  {path:"vouchers", component: VoucherComponent},
-  {path:"**", component: NotFoundComponent}
-
+   { path: '', redirectTo: '/login', pathMatch: 'full' },
+   { path: 'login', component: LoginComponent },
+   { path: 'forgot-password', component: ForgotPasswordComponent },
+   { path: 'users', component: UserComponent },
+   { path: 'visitors', component: VisitorComponent },
+   { path: 'vouchers', component: VoucherComponent },
+   { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+   imports: [RouterModule.forRoot(routes)],
+   exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

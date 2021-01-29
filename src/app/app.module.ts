@@ -15,6 +15,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from 'src/angular-material.module';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { FooterComponent } from './shared/components/footer/footer.component';
 @NgModule({
    declarations: [
       AppComponent,
@@ -25,6 +26,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
       NavBarMenuComponent,
       NotFoundComponent,
       ForgotPasswordComponent,
+      FooterComponent,
    ],
    imports: [
       BrowserModule,
