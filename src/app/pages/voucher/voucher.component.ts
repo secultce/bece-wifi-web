@@ -1,14 +1,15 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-
+import { ModalRegisterVisitorsComponent } from 'src/app/shared/components/modal-register-visitors/modal-register-visitors.component';
+import { MatDialog } from '@angular/material/dialog';
 @Component({
    selector: 'app-voucher',
    templateUrl: './voucher.component.html',
    styleUrls: ['./voucher.component.scss'],
 })
 export class VoucherComponent implements AfterViewInit {
-   constructor() {}
+   constructor(public dialog: MatDialog) {}
 
    //  ngOnInit(): void {}
    displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
@@ -27,6 +28,13 @@ export class VoucherComponent implements AfterViewInit {
       if (this.dataSource.paginator) {
          this.dataSource.paginator.firstPage();
       }
+   }
+   openDialog() {
+      const dialogRef = this.dialog.open(ModalRegisterVisitorsComponent);
+
+      dialogRef.afterClosed().subscribe((result) => {
+         console.log(`Dialog result: ${result}`);
+      });
    }
 }
 

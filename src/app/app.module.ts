@@ -17,6 +17,8 @@ import { MaterialModule } from 'src/angular-material.module';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { ModalRegisterVisitorsComponent } from './shared/components/modal-register-visitors/modal-register-visitors.component';
+import { UploadFilesComponent } from './shared/components/upload-files/upload-files.component';
+import { NgxMaskModule } from 'ngx-mask';
 @NgModule({
    declarations: [
       AppComponent,
@@ -29,6 +31,7 @@ import { ModalRegisterVisitorsComponent } from './shared/components/modal-regist
       ForgotPasswordComponent,
       FooterComponent,
       ModalRegisterVisitorsComponent,
+      UploadFilesComponent,
    ],
    imports: [
       BrowserModule,
@@ -39,6 +42,7 @@ import { ModalRegisterVisitorsComponent } from './shared/components/modal-regist
       ReactiveFormsModule,
       MaterialModule,
       MatSidenavModule,
+      NgxMaskModule,
    ],
    providers: [],
    bootstrap: [AppComponent],
