@@ -16,6 +16,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from 'src/angular-material.module';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { FooterComponent } from './shared/components/footer/footer.component';
+import { ModalRegisterVisitorsComponent } from './shared/components/modal-register-visitors/modal-register-visitors.component';
 @NgModule({
    declarations: [
       AppComponent,
@@ -27,6 +28,7 @@ import { FooterComponent } from './shared/components/footer/footer.component';
       NotFoundComponent,
       ForgotPasswordComponent,
       FooterComponent,
+      ModalRegisterVisitorsComponent,
    ],
    imports: [
       BrowserModule,

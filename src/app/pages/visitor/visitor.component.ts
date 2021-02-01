@@ -1,13 +1,15 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+import { MatDialog } from '@angular/material/dialog';
+import { ModalRegisterVisitorsComponent } from 'src/app/shared/components/modal-register-visitors/modal-register-visitors.component';
 @Component({
    selector: 'app-visitor',
    templateUrl: './visitor.component.html',
    styleUrls: ['./visitor.component.scss'],
 })
 export class VisitorComponent implements AfterViewInit {
-   constructor() {}
+   constructor(public dialog: MatDialog) {}
 
    //  ngOnInit(): void {}
    displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
@@ -18,6 +20,21 @@ export class VisitorComponent implements AfterViewInit {
 
    ngAfterViewInit() {
       this.dataSource.paginator = this.paginator;
+   }
+   applyFilter(event: Event) {
+      const filterValue = (event.target as HTMLInputElement).value;
+      this.dataSource.filter = filterValue.trim().toLowerCase();
+
+      if (this.dataSource.paginator) {
+         this.dataSource.paginator.firstPage();
+      }
+   }
+   openDialog() {
+      const dialogRef = this.dialog.open(ModalRegisterVisitorsComponent);
+
+      dialogRef.afterClosed().subscribe((result) => {
+         console.log(`Dialog result: ${result}`);
+      });
    }
 }
 

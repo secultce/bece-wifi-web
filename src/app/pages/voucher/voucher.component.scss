@@ -1,3 +1,23 @@
 table {
    width: 100%;
 }
+.example-table-container {
+   position: relative;
+   max-height: 700px;
+   overflow: auto;
+}
+th {
+   font-size: 16px;
+   color: black;
+}
+h1.panel-title {
+   margin-left: 5%;
+}
+div#button-visitors {
+   text-align: end;
+}
+button#btn-cadastrar-visitors {
+   margin-right: 5%;
+   background-color: #007bff;
+   color: white;
+}
